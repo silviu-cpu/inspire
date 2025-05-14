@@ -1,0 +1,46 @@
+<!-- modal.component.html -->
+<div class="modal-backdrop" (click)="closeModal()"></div>
+<div class="modal-container">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title">Înregistrare curs</h2>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="closeModal()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form (ngSubmit)="submitForm()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nume complet:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Adresă de email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-primary">
+            Înregistrează-te
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
