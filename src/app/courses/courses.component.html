@@ -1,7 +1,7 @@
 <section class="courses-section">
   <div class="courses">
     <!-- Full Stack Development -->
-    <div class="course-card" (click)="openModal('Full Stack Development')">
+    <div class="course-card">
       <div class="card-header">
         <h3 class="course-title">Full Stack Development</h3>
       </div>
@@ -63,12 +63,17 @@
       </div>
 
       <div class="card-footer">
-        <button class="hero-button">Vezi detalii</button>
+        <button
+          class="hero-button"
+          (click)="openModal('Full Stack Development')"
+        >
+          Vezi detalii
+        </button>
       </div>
     </div>
 
     <!-- Java in Web Development -->
-    <div class="course-card" (click)="openModal('Java in Web Development')">
+    <div class="course-card">
       <div class="card-header">
         <h3 class="course-title">Java in Web Development</h3>
       </div>
@@ -132,7 +137,12 @@
       </div>
 
       <div class="card-footer">
-        <button class="hero-button">Vezi detalii</button>
+        <button
+          class="hero-button"
+          (click)="openModal('Java in Web Development')"
+        >
+          Vezi detalii
+        </button>
       </div>
     </div>
 
@@ -154,6 +164,62 @@
 
       <div class="card-footer">
         <button class="btn btn-outline-secondary" disabled>Indisponibil</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="enrollment-section">
+  <div class="enrollment-wrapper">
+    <div class="course-card enrollment-process-card">
+      <div class="card-header">
+        <h3 class="course-title">Procesul de înrolare</h3>
+      </div>
+      <div class="card-body">
+        <div class="approach-steps">
+          <div class="approach-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4 class="step-title">Completezi formularul de înscriere</h4>
+              <p class="step-description">
+                Ne trimiți câteva informații despre tine și nivelul tău actual.
+              </p>
+            </div>
+          </div>
+          <div class="approach-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4 class="step-title">Avem un call introductiv</h4>
+              <p class="step-description">
+                Discutăm live pentru a vedea dacă acest curs este potrivit
+                pentru tine.
+              </p>
+            </div>
+          </div>
+          <div class="approach-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4 class="step-title">Te încadrezi într-o grupă</h4>
+              <p class="step-description">
+                Alegem grupa care corespunde nivelului tău și orarului tău.
+              </p>
+            </div>
+          </div>
+          <div class="approach-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4 class="step-title">Începem cursul!</h4>
+              <p class="step-description">
+                Ne vedem fizic la locația Inspire și începem să construim
+                împreună.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="hero-button" (click)="openModal('Modal')">
+          Mă înscriu
+        </button>
       </div>
     </div>
   </div>
