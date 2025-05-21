@@ -25,14 +25,13 @@ export class ModalComponent {
 
   submitForm(form: NgForm) {
     if (form.invalid) {
-      // Marchează toate câmpurile ca fiind atinse pentru a afișa erorile
       Object.keys(form.controls).forEach((key) => {
         form.controls[key].markAsTouched();
       });
-      return; // Nu trimitem dacă formularul este invalid
+      return;
     }
 
-    this.isSubmitting = true; // Activăm starea de încărcare
+    this.isSubmitting = true;
 
     const templateParams = {
       course: this.courseTitle,
@@ -40,8 +39,6 @@ export class ModalComponent {
       email: this.formData.email,
       phone: this.formData.phone,
     };
-
-    console.log('Sending data:', templateParams);
 
     emailjs
       .send(
