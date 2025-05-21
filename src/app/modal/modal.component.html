@@ -1,4 +1,3 @@
-<!-- modal.component.html -->
 <div class="modal-backdrop" (click)="closeModal()"></div>
 <div class="modal-container">
   <div class="modal-content">
@@ -12,7 +11,10 @@
       ></button>
     </div>
     <div class="modal-body">
-      <form (ngSubmit)="submitForm()">
+      <form
+        #registrationForm="ngForm"
+        (ngSubmit)="submitForm(registrationForm)"
+      >
         <div class="mb-3">
           <label for="name" class="form-label">Nume complet:</label>
           <input
@@ -20,8 +22,13 @@
             class="form-control"
             id="name"
             name="name"
+            [(ngModel)]="formData.name"
             required
+            #name="ngModel"
           />
+          <div *ngIf="name.invalid && name.touched" class="text-danger">
+            Te rugăm să introduci numele complet.
+          </div>
         </div>
 
         <div class="mb-3">
@@ -31,13 +38,46 @@
             class="form-control"
             id="email"
             name="email"
+            [(ngModel)]="formData.email"
             required
+            email
+            #email="ngModel"
           />
+          <div *ngIf="email.invalid && email.touched" class="text-danger">
+            Te rugăm să introduci o adresă de email validă.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label">Număr de telefon:</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone"
+            name="phone"
+            [(ngModel)]="formData.phone"
+            required
+            pattern="^[0-9]{7,15}$"
+            #phone="ngModel"
+          />
+          <div *ngIf="phone.invalid && phone.touched" class="text-danger">
+            Te rugăm să introduci un număr de telefon valid (doar cifre).
+          </div>
         </div>
 
         <div class="text-center mt-4">
-          <button type="submit" class="btn btn-primary">
-            Înregistrează-te
+          <button
+            type="submit"
+            class="btn btn-primary send-email"
+            [disabled]="registrationForm.invalid || isSubmitting"
+          >
+            <span
+              *ngIf="isSubmitting"
+              class="spinner-border spinner-border-sm me-2"
+              role="status"
+              aria-hidden="true"
+            ></span>
+            {{ isSubmitting ? "Se trimite..." : "Înregistrează-te" }}
           </button>
         </div>
       </form>

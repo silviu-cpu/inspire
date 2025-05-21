@@ -12,18 +12,8 @@
   </div>
   <button class="navbar-toggler" (click)="toggleMenu()">menu</button>
   <div class="navbar-menu" [ngClass]="{ 'is-active': isMenuActive }">
-    <a
-      class="navbar-item"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      [routerLink]="['/']"
-      >Acasa</a
-    >
-    <a class="navbar-item" routerLinkActive="active" [routerLink]="['/courses']"
-      >Cursuri</a
-    >
-    <a class="navbar-item" routerLinkActive="active" [routerLink]="['/about']"
-      >Despre Noi</a
-    >
+    <a class="navbar-item" href="#hero">Acasa</a>
+    <a class="navbar-item" href="#courses">Cursuri</a>
+    <a class="navbar-item" href="#about">Despre Noi</a>
   </div>
 </nav>
