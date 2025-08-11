@@ -2,15 +2,12 @@
 .courses-section {
   padding: 2rem 0;
   border-bottom: 2px solid #333;
+  text-align: center;
 }
 
 .courses {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  max-width: 1200px;
+  max-width: 400px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .course-card {

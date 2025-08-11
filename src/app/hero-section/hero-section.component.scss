@@ -85,3 +85,129 @@ a {
   color: #6d2ff4 !important;
   text-decoration: none;
 }
+
+.about-card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  padding: 1.25rem 1.5rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.about-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.card-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.about-text {
+  font-size: 1.125rem;
+  color: #343a40;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #6d2ff4;
+  font-weight: bold;
+}
+
+.about-card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  padding: 1.25rem 1.5rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.about-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.card-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.value-item {
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: #f8f9fa;
+  border-left: 3px solid #6d2ff4;
+}
+
+.value-name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #212529;
+}
+
+.value-description {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+.about-content {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  flex: 1 1 100%; /* implicit full width pe mobil */
+  min-width: 280px; /* să nu fie prea îngust */
+  height: 52vh;
+}
+
+/* La minim 768px (tabletă și mai mare), două carduri pe rând */
+@media (min-width: 768px) {
+  .about-card {
+    flex: 1 1 45%; /* fiecare ocupă ~45% din container */
+  }
+}
